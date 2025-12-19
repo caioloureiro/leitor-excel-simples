@@ -94,10 +94,28 @@ leitor-excel-simples/
 
 Siga as diretrizes em `preferences.md`:
 
-- Indentação com **TAB**
-- Unidades responsivas com **VW** quando possível
-- Cores via variáveis CSS em `:root`
-- Propriedades específicas (não shorthands genéricos)
+### Padrões de Código
+- **Indentação**: TAB (nunca espaços)
+- **Layout**: Float para layouts simples; Flexbox/Grid apenas quando necessário
+- **Nunca usar**: 100vw, comentários inline em CSS
+
+### CSS
+- **Unidades**: VW para medidas responsivas; evitar VH e PX quando possível
+- **Cores**: Usar `white` e `black` explicitamente quando necessário; demais cores via variáveis `:root`
+- **Variáveis**: Fonte, tamanho, altura de linha, espaçamento tudo via `:root`
+- **Propriedades**: Usar específicas (`background-color`, `border-width`, etc.), nunca shorthands genéricos
+- **Formatação**: CSS conciso sem linhas em branco desnecessárias; válido para inclusão inline
+
+### Estrutura de Arquivos
+- Cada arquivo deve conter apenas marcadores `/* Start */` e `/* End */` no topo/rodapé
+- Documentação e diretrizes em `preferences.md` ou `README.md` (nunca comentários inline)
+- Importação via PHP: `<?php require 'css/arquivo.css'; ?>`
+
+### Modelo de Importação
+```php
+<style><?php require 'estilo.css'; ?></style>
+<script><?php require 'script.js'; ?></script>
+```
 - Sem comentários inline em CSS
 
 ## 🔧 Tecnologias Utilizadas
