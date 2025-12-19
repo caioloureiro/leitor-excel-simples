@@ -1,0 +1,288 @@
+/* Start - estilo.css */
+:root {
+	--bg-primary: #1a1a1a;
+	--bg-secondary: #2d2d2d;
+	--bg-tertiary: #3a3a3a;
+	--text-primary: #e0e0e0;
+	--text-secondary: #a0a0a0;
+	--accent: #00d4ff;
+	--accent-hover: #00a8cc;
+	--success: #00d084;
+	--warning: #ffa500;
+	--error: #ff4444;
+	--border: #404040;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	font-size: 14px;
+	line-height: 1.6;
+	min-height: 100vh;
+}
+
+header {
+	background-color: var(--bg-secondary);
+	border-bottom: 2px solid var(--accent);
+	padding: 2rem 1rem;
+	text-align: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+	color: var(--accent);
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+main {
+	padding: 2rem 1rem;
+}
+
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.controls {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 2rem;
+	flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-info {
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-weight: 600;
+}
+
+.btn-primary {
+	background-color: var(--accent);
+	color: black;
+}
+
+.btn-primary:hover:not(:disabled) {
+	background-color: var(--accent-hover);
+	box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+	transform: translateY(-2px);
+}
+
+.btn-secondary {
+	background-color: var(--bg-tertiary);
+	color: var(--text-primary);
+	border: 1px solid var(--border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+	background-color: var(--border);
+	border-color: var(--accent);
+}
+
+.btn-success {
+	background-color: var(--success);
+	color: black;
+}
+
+.btn-success:hover:not(:disabled) {
+	background-color: #00a860;
+	box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
+	transform: translateY(-2px);
+}
+
+.btn-danger {
+	background-color: var(--error);
+	color: white;
+	padding: 0.5rem 1rem;
+	font-size: 0.85rem;
+}
+
+.btn-danger:hover:not(:disabled) {
+	background-color: #cc0000;
+	box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+}
+
+.btn-info {
+	background-color: var(--accent);
+	color: black;
+	padding: 0.5rem 1rem;
+	font-size: 0.85rem;
+}
+
+.btn-info:hover:not(:disabled) {
+	background-color: var(--accent-hover);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-success:disabled,
+.btn-danger:disabled,
+.btn-info:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.form-novo {
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--accent);
+	border-radius: 6px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+.form-novo h3 {
+	color: var(--accent);
+	margin-bottom: 1.5rem;
+	font-size: 1.2rem;
+}
+
+.form-novo .form-group {
+	margin-bottom: 1rem;
+}
+
+.form-novo label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+.form-novo input,
+.form-novo textarea {
+	width: 100%;
+	padding: 0.75rem;
+	background-color: var(--bg-tertiary);
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	color: var(--text-primary);
+	font-family: inherit;
+	font-size: 0.95rem;
+	transition: border-color 0.3s ease;
+}
+
+.form-novo input:focus,
+.form-novo textarea:focus {
+	outline: none;
+	border-color: var(--accent);
+	box-shadow: 0 0 4px rgba(0, 212, 255, 0.2);
+}
+
+.form-buttons {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.resultado {
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 1.5rem;
+	min-height: 200px;
+	overflow-x: auto;
+}
+
+.resultado table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1rem;
+}
+
+.resultado table thead {
+	background-color: var(--bg-tertiary);
+}
+
+.resultado table th,
+.resultado table td {
+	padding: 0.75rem;
+	border: 1px solid var(--border);
+	text-align: left;
+}
+
+.resultado table th {
+	color: var(--accent);
+	font-weight: 600;
+}
+
+.resultado table tbody tr:hover {
+	background-color: var(--bg-tertiary);
+}
+
+.resultado table tbody tr:nth-child(even) {
+	background-color: rgba(0, 212, 255, 0.02);
+}
+
+.td-acoes {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.loading {
+	text-align: center;
+	color: var(--text-secondary);
+	padding: 2rem;
+}
+
+.loading::after {
+	content: '';
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	margin-left: 0.5rem;
+	border: 2px solid var(--border);
+	border-top-color: var(--accent);
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	to { transform: rotate(360deg); }
+}
+
+.erro {
+	background-color: rgba(255, 68, 68, 0.1);
+	border: 1px solid var(--error);
+	color: var(--error);
+	padding: 1rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+}
+
+.sucesso {
+	background-color: rgba(0, 208, 132, 0.1);
+	border: 1px solid var(--success);
+	color: var(--success);
+	padding: 1rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+}
+
+.aviso {
+	background-color: rgba(255, 165, 0, 0.1);
+	border: 1px solid var(--warning);
+	color: var(--warning);
+	padding: 1rem;
+	border-radius: 4px;
+	margin-top: 1rem;
+}
+/* End - estilo.css */
