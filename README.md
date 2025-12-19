@@ -1,9 +1,10 @@
-# 📊 CRUD Excel - Tema Escuro
+# 📊 Leitor Excel Simples
 
-Um sistema web completo para gerenciar dados em arquivos Excel com interface moderna em tema escuro.
-Desenvolvido por Caio Loureiro.
-Site: https://digitalmd.com.br
-Informações do Desenvolvedor: https://digitalmd.com.br/caioloureiro/cv/
+Um sistema web completo para ler, criar, editar e deletar dados em arquivos Excel com interface moderna em tema escuro.
+
+**Desenvolvido por:** Caio Loureiro  
+**Site:** https://digitalmd.com.br  
+**Currículo:** https://digitalmd.com.br/caioloureiro/cv/
 
 ## ✨ Funcionalidades
 
@@ -26,22 +27,22 @@ Informações do Desenvolvedor: https://digitalmd.com.br/caioloureiro/cv/
 
 1. **Clone ou copie os arquivos** para sua pasta web:
 ```bash
-cd c:\wamp64\www\google-sheets-crud
+cd c:\wamp64\www\leitor-excel-simples
 ```
 
 2. **Instale as dependências** com Composer:
 ```bash
-composer require phpoffice/phpspreadsheet
+composer install
 ```
 
 3. **Crie dados de exemplo** (opcional):
-- Acesse `http://localhost/google-sheets-crud/criar_dados.php`
+- Acesse `http://localhost/leitor-excel-simples/criar_dados.php`
 - Isso gerará um arquivo `teste.xlsx` com dados de exemplo
 
 ## 📖 Como Usar
 
 1. **Acesse o sistema**:
-   - `http://localhost/google-sheets-crud/`
+   - `http://localhost/leitor-excel-simples/`
 
 2. **Carregue o Excel**:
    - Clique em "Carregar Excel"
@@ -76,7 +77,7 @@ composer require phpoffice/phpspreadsheet
 ## 📁 Estrutura de Arquivos
 
 ```
-google-sheets-crud/
+leitor-excel-simples/
 ├── index.php           # Página principal com HTML e lógica PHP
 ├── estilo.css          # Estilos do tema escuro (incluído em index.php)
 ├── script.js           # Lógica do CRUD em JavaScript (incluído em index.php)
